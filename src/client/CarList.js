@@ -72,7 +72,7 @@ class CarsList extends Component {
         model={u.model}
         price={u.price}
         chasis_number={u.chasis_number}
-        avaialable={u.avaialable}
+        available={u.available}
         //you must include the handleDelete method to use in child components
         handleDelete={this.handleDelete}
       />

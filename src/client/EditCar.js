@@ -15,7 +15,7 @@ class EditCar extends Component {
       model: "",
       chasis_number: "",
       price: 0,
-      avaialable: false,
+      available: false,
     };
 
     //this binding is necessary to make `this` work in the callback
@@ -46,7 +46,7 @@ class EditCar extends Component {
           model: response.data.model,
           chasis_number: response.data.chasis_number,
           price: response.data.price,
-          avaialable: response.data.avaialable,
+          available: response.data.available,
         });
       })
       .catch((error) => {
@@ -56,7 +56,7 @@ class EditCar extends Component {
 
   handleAvailable = (e) => {
     this.setState({
-      avaialable: !this.state.avaialable,
+      available: !this.state.available,
     });
   };
   handleSubmit(event) {
@@ -143,8 +143,8 @@ class EditCar extends Component {
                     <div class='form-group'>
                       <input
                         type='checkbox'
-                        name='avaialable'
-                        checked={this.state.avaialable}
+                        name='available'
+                        checked={this.state.available}
                         value='true'
                         onClick={this.handleAvailable}
                       />{" "}
